@@ -13,16 +13,16 @@ mysql:
 	docker run --name mysql8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -d mysql:8
 
 migrateup: 
-	migrate -path db/migration -database "DB_URL" -verbose up
+	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migrateup1: 
-	migrate -path db/migration -database "DB_URL" -verbose up 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "DB_URL" -verbose down
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 migratedown1:
-	migrate -path db/migration -database "DB_URL" -verbose down 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 db_docs:
 	dbdocs build doc/db.dbml
