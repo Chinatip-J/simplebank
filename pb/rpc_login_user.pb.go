@@ -162,13 +162,13 @@ var File_rpc_login_user_proto protoreflect.FileDescriptor
 
 const file_rpc_login_user_proto_rawDesc = "" +
 	"\n" +
-	"\x14rpc_login_user.proto\x12\x02db\x1a\n" +
+	"\x14rpc_login_user.proto\x12\x02pb\x1a\n" +
 	"user.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"J\n" +
 	"\x10LoginUserRequest\x12\x1a\n" +
 	"\busername\x18\x01 \x01(\tR\busername\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\"\xc0\x02\n" +
 	"\x11LoginUserResponse\x12\x1c\n" +
-	"\x04user\x18\x01 \x01(\v2\b.db.UserR\x04user\x12\x1d\n" +
+	"\x04user\x18\x01 \x01(\v2\b.pb.UserR\x04user\x12\x1d\n" +
 	"\n" +
 	"session_id\x18\x02 \x01(\tR\tsessionId\x12!\n" +
 	"\faccess_token\x18\x03 \x01(\tR\vaccessToken\x12#\n" +
@@ -190,15 +190,15 @@ func file_rpc_login_user_proto_rawDescGZIP() []byte {
 
 var file_rpc_login_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_rpc_login_user_proto_goTypes = []any{
-	(*LoginUserRequest)(nil),      // 0: db.LoginUserRequest
-	(*LoginUserResponse)(nil),     // 1: db.LoginUserResponse
-	(*User)(nil),                  // 2: db.User
+	(*LoginUserRequest)(nil),      // 0: pb.LoginUserRequest
+	(*LoginUserResponse)(nil),     // 1: pb.LoginUserResponse
+	(*User)(nil),                  // 2: pb.User
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_rpc_login_user_proto_depIdxs = []int32{
-	2, // 0: db.LoginUserResponse.user:type_name -> db.User
-	3, // 1: db.LoginUserResponse.access_token_expires_at:type_name -> google.protobuf.Timestamp
-	3, // 2: db.LoginUserResponse.refresh_token_expires_at:type_name -> google.protobuf.Timestamp
+	2, // 0: pb.LoginUserResponse.user:type_name -> pb.User
+	3, // 1: pb.LoginUserResponse.access_token_expires_at:type_name -> google.protobuf.Timestamp
+	3, // 2: pb.LoginUserResponse.refresh_token_expires_at:type_name -> google.protobuf.Timestamp
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

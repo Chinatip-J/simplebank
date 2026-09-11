@@ -137,7 +137,7 @@ var File_rpc_create_user_proto protoreflect.FileDescriptor
 
 const file_rpc_create_user_proto_rawDesc = "" +
 	"\n" +
-	"\x15rpc_create_user.proto\x12\x02db\x1a\n" +
+	"\x15rpc_create_user.proto\x12\x02pb\x1a\n" +
 	"user.proto\"~\n" +
 	"\x11CreateUserRequest\x12\x1a\n" +
 	"\busername\x18\x01 \x01(\tR\busername\x12\x1b\n" +
@@ -145,7 +145,7 @@ const file_rpc_create_user_proto_rawDesc = "" +
 	"\x05email\x18\x03 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x04 \x01(\tR\bpassword\"2\n" +
 	"\x12CreateUserResponse\x12\x1c\n" +
-	"\x04user\x18\x01 \x01(\v2\b.db.UserR\x04userB%Z#github.com/techschool/simplebank/pbb\x06proto3"
+	"\x04user\x18\x01 \x01(\v2\b.pb.UserR\x04userB%Z#github.com/techschool/simplebank/pbb\x06proto3"
 
 var (
 	file_rpc_create_user_proto_rawDescOnce sync.Once
@@ -161,12 +161,12 @@ func file_rpc_create_user_proto_rawDescGZIP() []byte {
 
 var file_rpc_create_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_rpc_create_user_proto_goTypes = []any{
-	(*CreateUserRequest)(nil),  // 0: db.CreateUserRequest
-	(*CreateUserResponse)(nil), // 1: db.CreateUserResponse
-	(*User)(nil),               // 2: db.User
+	(*CreateUserRequest)(nil),  // 0: pb.CreateUserRequest
+	(*CreateUserResponse)(nil), // 1: pb.CreateUserResponse
+	(*User)(nil),               // 2: pb.User
 }
 var file_rpc_create_user_proto_depIdxs = []int32{
-	2, // 0: db.CreateUserResponse.user:type_name -> db.User
+	2, // 0: pb.CreateUserResponse.user:type_name -> pb.User
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
