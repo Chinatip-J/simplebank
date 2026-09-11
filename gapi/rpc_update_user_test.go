@@ -2,11 +2,11 @@ package gapi
 
 import (
 	"context"
-	"database/sql"
 	"testing"
 	"time"
 
 	"github.com/golang/mock/gomock"
+	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/stretchr/testify/require"
 	mockdb "github.com/techschool/simplebank/db/mock"
 	db "github.com/techschool/simplebank/db/sqlc"
@@ -20,7 +20,6 @@ import (
 func TestUpdateUserAPI(t *testing.T) {
 	user, _ := randomUser(t)
 	other, _ := randomUser(t)
-
 
 	newName := util.RandomOwner()
 	newEmail := util.RandomEmail()
@@ -43,11 +42,11 @@ func TestUpdateUserAPI(t *testing.T) {
 			buildStubs: func(store *mockdb.MockStore) {
 				arg := db.UpdateUserParams{
 					Username: user.Username,
-					FullName: sql.NullString{
+					FullName: pgtype.Text{
 						String: newName,
 						Valid:  true,
 					},
-					Email: sql.NullString{
+					Email: pgtype.Text{
 						String: newEmail,
 						Valid:  true,
 					},
@@ -88,11 +87,11 @@ func TestUpdateUserAPI(t *testing.T) {
 			buildStubs: func(store *mockdb.MockStore) {
 				arg := db.UpdateUserParams{
 					Username: user.Username,
-					FullName: sql.NullString{
+					FullName: pgtype.Text{
 						String: newName,
 						Valid:  true,
 					},
-					Email: sql.NullString{
+					Email: pgtype.Text{
 						String: newEmail,
 						Valid:  true,
 					},
